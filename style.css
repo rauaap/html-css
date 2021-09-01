@@ -1,6 +1,8 @@
 body {
     background-color: DimGrey;
     color: white;
+    font-family: Consolas;
+    margin: 0px;
 }
 
 a {
@@ -16,11 +18,21 @@ a:hover {
     color: DodgerBlue;
 }
 
+#navbar {
+    background-color: lightgreen;
+    height: 50px;
+    margin: 0px;
+}
+
+.navigation {
+    margin: 0px;
+}
+
 .top {
     list-style-type: none;
     float: left;
-    padding: 2px;
-    border-radius: 2px;
+    padding: 10px;
+    border-radius: 5px;
     background-color: black;
-    margin: 0px 5px;
+    margin: 5px 5px;
 }
