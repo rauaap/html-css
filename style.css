@@ -1,3 +1,7 @@
+:root {
+    --menuitem-border: black;
+}
+
 body {
     background-color: DimGrey;
     color: white;
@@ -10,9 +14,9 @@ a {
     text-decoration: none;
 }
 
-a:visited {
+/* a:visited {
     color: HotPink;
-}
+} */
 
 a:hover {
     color: DodgerBlue;
@@ -21,42 +25,46 @@ a:hover {
 .page-wide-bar {
     display: flex;
     width: 100vw;
-    background-color: lightgreen;
+    background-color: grey;
 }
 
 .bottom {
     position: fixed;
     bottom: 0px;
-    height: 55px;
-    background-color: lightgreen;
+    height: 35px;
     align-items: center;
-    justify-content: space-between;
+    padding-left: 20px;
 }
 
 .navigation {
     margin: 0px;
-    padding-left: 20px;
+    padding-left: 0px;
 }
 
 .navbar-item {
     list-style-type: none;
     float: left;
     padding: 10px;
-    background-color: black;
+    background-color: grey;
     border-width: 0px 1px;
-    border-color: red;
+    border-color: var(--menuitem-border);
     border-style: solid;
 }
 
+.menu-icon {
+    width: 35px;
+}
+
 .navbar-item:last-child {
-    border-right: 2px solid red;
+    border-right: 2px solid var(--menuitem-border);
 }
 
 .navbar-item:first-child {
-    border-left: 2px solid red;
+    border-left: 0px solid var(--menuitem-border);
+    padding: 0px 5px;
 }
 
 .footer-text {
-    padding: 30px;
     color: black;
+    flex-basis: 200px;
 }
