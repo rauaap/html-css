@@ -1,7 +1,7 @@
 body {
     background-color: DimGrey;
     color: white;
-    font-family: Consolas;
+    font-family: Consolas, monospace;
     margin: 0px;
 }
 
@@ -18,21 +18,45 @@ a:hover {
     color: DodgerBlue;
 }
 
-#navbar {
+.page-wide-bar {
+    display: flex;
+    width: 100vw;
     background-color: lightgreen;
-    height: 50px;
-    margin: 0px;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0px;
+    height: 55px;
+    background-color: lightgreen;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navigation {
     margin: 0px;
+    padding-left: 20px;
 }
 
-.top {
+.navbar-item {
     list-style-type: none;
     float: left;
     padding: 10px;
-    border-radius: 5px;
     background-color: black;
-    margin: 5px 5px;
+    border-width: 0px 1px;
+    border-color: red;
+    border-style: solid;
+}
+
+.navbar-item:last-child {
+    border-right: 2px solid red;
+}
+
+.navbar-item:first-child {
+    border-left: 2px solid red;
+}
+
+.footer-text {
+    padding: 30px;
+    color: black;
 }
