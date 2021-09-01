@@ -1,0 +1,26 @@
+body {
+    background-color: DimGrey;
+    color: white;
+}
+
+a {
+    color: cyan;
+    text-decoration: none;
+}
+
+a:visited {
+    color: HotPink;
+}
+
+a:hover {
+    color: DodgerBlue;
+}
+
+.top {
+    list-style-type: none;
+    float: left;
+    padding: 2px;
+    border-radius: 2px;
+    background-color: black;
+    margin: 0px 5px;
+}
