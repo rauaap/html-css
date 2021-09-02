@@ -6,7 +6,7 @@ homeButtonHighlighted.src = '/img/home2.png'
 window.addEventListener('load', genMenu)
 window.addEventListener('load', genFooter)
 
-main.innerHTML = loremIpsum
+text.innerHTML = loremIpsum
 
 function createHomeButton() {
     var div = document.createElement('div')

@@ -19,8 +19,18 @@
     --navbar-item: var(--lbg)
 }
 
-#main {
-    margin: 35px 0px;
+.main-window {
+    height: 100vh;
+}
+
+.content-window {
+    display: flex;
+    height: 90%;
+    overflow-y: scroll;
+}
+
+.text-window {
+    width: 50%;
 }
 
 body {
@@ -43,11 +53,11 @@ a:hover {
     display: flex;
     width: 100vw;
     background-color: var(--page-wide-bar);
-    height: 35px;
+    height: 5%;
 }
 
 .fixed {
-    position: fixed;
+    /* position: absolute; */
 }
 
 .top {
