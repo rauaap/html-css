@@ -1,10 +1,12 @@
 const pageNames = ['Ansioluettelo', 'CV', 'Stuff', 'Morestuff']
 const links = ['ansioluettelo.html', 'cv.html', 'stuff.html', 'morestuff.html']
-const footerText = ['Aapo Raukovaara', 's1aara00@students.osao.fi', 'TEST2']
+const footerText = ['Aapo Raukovaara', 's1aara00@students.osao.fi', 'test']
 var homeButtonHighlighted = new Image()
 homeButtonHighlighted.src = '/img/home2.png'
 window.addEventListener('load', genMenu)
 window.addEventListener('load', genFooter)
+
+main.innerHTML = loremIpsum
 
 function createHomeButton() {
     var div = document.createElement('div')
