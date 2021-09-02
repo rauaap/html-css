@@ -1,6 +1,8 @@
 const pageNames = ['Ansioluettelo', 'CV', 'Stuff', 'Morestuff']
 const links = ['ansioluettelo.html', 'cv.html', 'stuff.html', 'morestuff.html']
-const footerText = ['TEST0', 'TEST1', 'TEST2']
+const footerText = ['Aapo Raukovaara', 's1aara00@students.osao.fi', 'TEST2']
+var homeButtonHighlighted = new Image()
+homeButtonHighlighted.src = '/img/home2.png'
 window.addEventListener('load', genMenu)
 window.addEventListener('load', genFooter)
 
@@ -11,11 +13,23 @@ function createHomeButton() {
     a.href = '/'
     a.className = 'home-link'
     var img = document.createElement('img')
+    img.id = 'homeButton'
+    img.addEventListener('mouseover', highlightHomeButton)
+    img.addEventListener('mouseout', highlightHomeButton)
     img.className = 'menu-icon'
     img.src = '/img/home.png'
     a.appendChild(img)
     div.appendChild(a)
     return div
+}
+
+function highlightHomeButton() {
+    if ( event.type == 'mouseover' ) {
+        event.target.src = '/img/home2.png'
+    }
+    else if ( event.type == 'mouseout') {
+        event.target.src = '/img/home.png'
+    }
 }
 
 function genMenu() {

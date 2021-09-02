@@ -1,8 +1,22 @@
 :root {
-    --bg: DimGrey;
-    --fg: white;
+    --bg: #282a36;
+    --lbg: #44475a;
+    --vlbg: #6272a4;
+    --fg: #f8f8f2;
+    --cyan: #8be9fd;
+    --green: #50fa7b;
+    --orange: #ffb86c;
+    --pink: #ff79c6;
+    --purple: #bd93f9;
+    --red: #ff5555;
+    --yellow: #f1fa8c;
+
     --menuitem-border: var(--bg);
-    --footer-text: black;
+    --footer-text: var(--fg);
+    --link: var(--cyan);
+    --link-hover: var(--pink);
+    --page-wide-bar: var(--lbg);
+    --navbar-item: var(--lbg)
 }
 
 #test {
@@ -17,22 +31,18 @@ body {
 }
 
 a {
-    color: cyan;
+    color: var(--link);
     text-decoration: none;
 }
 
-/* a:visited {
-    color: HotPink;
-} */
-
 a:hover {
-    color: DodgerBlue;
+    color: var(--link-hover);
 }
 
 .page-wide-bar {
     display: flex;
     width: 100vw;
-    background-color: grey;
+    background-color: var(--page-wide-bar);
     height: 35px;
 }
 
@@ -49,12 +59,13 @@ a:hover {
     height: 35px;
     padding-left: 20px;
     align-items: center;
+    /* justify-content: space-between; */
 }
 
 .navbar-item {
     display: flex;
     align-items: center;
-    background-color: grey;
+    background-color: var(--navbar-item);
     border-width: 0px 1px;
     border-color: var(--menuitem-border);
     border-style: solid;
@@ -82,5 +93,14 @@ a:hover {
 
 .footer-text {
     color: var(--footer-text);
-    flex-basis: 200px;
+    font-size: 14px;
+    flex-basis: 15vw;
+}
+
+.footer-text:nth-last-child(2) {
+    flex-grow: 2;
+}
+
+.footer-text:last-child {
+    /* flex-shrink: 2; */
 }
