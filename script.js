@@ -3,7 +3,7 @@ const links = ['ansioluettelo.html', 'cv.html', 'stuff.html', 'morestuff.html']
 const footerText = ['Aapo Raukovaara', 's1aara00@students.osao.fi',
                     ['Github', 'https://github.com/aaprau/html_css']]
 var homeButtonHighlighted = new Image()
-homeButtonHighlighted.src = '/img/home2.png'
+homeButtonHighlighted.src = 'img/home2.png'
 window.addEventListener('load', genMenu)
 window.addEventListener('load', genFooter)
 
@@ -13,14 +13,14 @@ function createHomeButton() {
     var div = document.createElement('div')
     div.className = 'menu-item navbar-item centered-flex'
     var a = document.createElement('a')
-    a.href = '/'
+    a.href = 'index.html'
     a.className = 'home-link centered-flex'
     var img = document.createElement('img')
     img.id = 'homeButton'
     img.addEventListener('mouseover', highlightHomeButton)
     img.addEventListener('mouseout', highlightHomeButton)
     img.className = 'menu-icon'
-    img.src = '/img/home.png'
+    img.src = 'img/home.png'
     a.appendChild(img)
     div.appendChild(a)
     return div
@@ -28,10 +28,10 @@ function createHomeButton() {
 
 function highlightHomeButton() {
     if ( event.type == 'mouseover' ) {
-        event.target.src = '/img/home2.png'
+        event.target.src = 'img/home2.png'
     }
     else if ( event.type == 'mouseout') {
-        event.target.src = '/img/home.png'
+        event.target.src = 'img/home.png'
     }
 }
 
@@ -43,7 +43,7 @@ function genMenu() {
         var div = document.createElement('div')
         div.className = 'navbar-item edges-text centered-flex'
         var a = document.createElement('a')
-        a.href = '/pages/' + links[i]
+        a.href = links[i]
         a.innerHTML = pageNames[i]
         div.appendChild(a)
         navbar.appendChild(div)
