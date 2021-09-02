@@ -2,7 +2,7 @@ const pageNames = ['Ansioluettelo', 'CV', 'Stuff', 'Morestuff']
 const links = ['ansioluettelo.html', 'cv.html', 'stuff.html', 'morestuff.html']
 const footerText = ['Aapo Raukovaara',
                     ['s1aara00@students.osao.fi', 'mailto:s1aara00@students.osao.fi'],
-                    ['Github', 'https://github.com/aaprau/html_css']]
+                    ['Github', 'https://github.com/rauaap/html_css']]
 var homeButtonHighlighted = new Image()
 homeButtonHighlighted.src = 'img/home2.png'
 window.addEventListener('load', genMenu)
