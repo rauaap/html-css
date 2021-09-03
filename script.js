@@ -1,5 +1,5 @@
-const pageNames = ['Ansioluettelo', 'CV', 'Stuff', 'Morestuff']
-const links = ['ansioluettelo.html', 'cv.html', 'stuff.html', 'morestuff.html']
+const pageNames = ['Ansioluettelo', 'Resume']
+const links = ['ansioluettelo.html', 'resume.html']
 const footerText = ['Aapo Raukovaara',
                     ['s1aara00@students.osao.fi', 'mailto:s1aara00@students.osao.fi'],
                     ['Github', 'https://github.com/rauaap/html-css']]
