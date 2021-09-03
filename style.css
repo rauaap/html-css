@@ -16,7 +16,9 @@
     --link: var(--cyan);
     --link-hover: var(--pink);
     --page-wide-bar: var(--lbg);
-    --navbar-item: var(--lbg)
+    --navbar-item: var(--lbg);
+    --emphasis: var(--yellow);
+    --link-visited: var(--purple);
 }
 
 body {
@@ -43,10 +45,8 @@ a:hover {
 
 .content-window {
     overflow-y: scroll;
-}
-
-.text-window {
-    width: 50%;
+    min-height: 90vh;
+    display: flex;
 }
 
 .page-wide-bar {
@@ -68,6 +68,11 @@ a:hover {
     border-color: var(--menuitem-border);
     border-style: solid;
     padding: 0px 5px;
+}
+
+.flag-icon {
+    margin-left: 2px;
+    margin-right: 5px;
 }
 
 .menu-icon {
@@ -102,4 +107,55 @@ a:hover {
 
 .edges-text {
     font-size: 14px;
+}
+
+.left-container {
+    flex-basis: 700px;
+}
+
+.main-table {
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+.main-table td {
+    width: 300px;
+}
+
+.main-table th {
+    width: 200px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    text-align: left;
+    color: var(--emphasis);
+}
+
+.main-table .multiline-cell p:first-child {
+    margin: 0px;
+}
+
+.right-container {
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.list-header {
+    margin-top: 0px;
+}
+
+.file-list {
+    list-style-image: url('img/download_m.png');
+    list-style-type: disc;
+}
+
+.file-list a:visited {
+    color: var(--link-visited);
+}
+
+.file-list a:hover {
+    color: var(--link-hover);
+}
+
+.file-list li::marker {
+    height: 15px;
 }

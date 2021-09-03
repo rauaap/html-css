@@ -8,7 +8,7 @@ homeButtonHighlighted.src = 'img/home2.png'
 window.addEventListener('load', genMenu)
 window.addEventListener('load', genFooter)
 
-text.innerHTML = loremIpsum
+// text.innerHTML = loremIpsum
 
 function createHomeButton() {
     var div = document.createElement('div')
@@ -40,12 +40,18 @@ function genMenu() {
     var navbar = document.getElementById('navbar')
     navbar.className = 'page-wide-bar top fixed'
     navbar.appendChild( createHomeButton() )
+    var languages = ['fi', 'gb']
     for ( var i = 0; i < links.length; i++ ) {
         var div = document.createElement('div')
         div.className = 'navbar-item edges-text centered-flex'
         var a = document.createElement('a')
+        var flag = document.createElement('img')
+        flag.src = `img/${languages[i]}.png`
+        flag.className = 'flag-icon'
+        a.appendChild(flag)
         a.href = links[i]
-        a.innerHTML = pageNames[i]
+        var text = document.createTextNode(pageNames[i])
+        a.appendChild(text)
         div.appendChild(a)
         navbar.appendChild(div)
     }
