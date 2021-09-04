@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Home page</title>
+        <title>Contact form</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="form.css">
     </head>
@@ -39,9 +39,9 @@
                                 <input id="business" type="radio" name="reason" checked><br>
                                 <label for="question">About the site</label>
                                 <input id="question" type="radio" name="reason"><br>
-                                <label for="other">Other (specify below)</label>
-                                <input id="other" type="radio" name="reason"><br>
-                                <input id="otherText" type="text" placeholder="Reason for contacting">
+                                <label for="other">Other</label>
+                                <input id="other" type="radio" name="reason">
+                                <input id="otherText" type="text" disabled="">
                             </div>
                         </fieldset>
                         <input type="submit" value="Submit"></input>
@@ -52,5 +52,6 @@
         </div>
     </body>
     <script src="script.js"></script>
+    <script>const lang = 1;</script>
     <script src="form.js"></script>
 </html>

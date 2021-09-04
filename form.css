@@ -14,6 +14,10 @@
     margin-left: 20px;
 }
 
+.main-form input:disabled {
+    background-color: var(--bg);
+}
+
 .space-between-field {
     display: flex;
     justify-content: space-between;
@@ -24,6 +28,10 @@
     width: 300px;
 }
 
+.test {
+    display:inline;
+}
+
 .message-box {
     width: 400px;
     height: 200px;
@@ -31,8 +39,4 @@
 
 .main-form input[type="submit"] {
     margin: 5px;
-}
-
-#otherText {
-    display: none;
 }

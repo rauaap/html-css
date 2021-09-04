@@ -1,10 +1,13 @@
 contactButtons.addEventListener('click', otherField)
 
 function otherField() {
+    var texts = ['Yhteydenoton syy', 'Reason for contacting']
     if ( other.checked == true ) {
-        otherText.style.display = 'inline'
+        otherText.disabled = false
+        otherText.placeholder = texts[lang]
     }
     else {
-        otherText.style.display = 'none'
+        otherText.disabled = true
+        otherText.placeholder = ''
     }
 }
