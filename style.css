@@ -45,8 +45,10 @@ a:hover {
 
 .content-window {
     overflow-y: scroll;
-    min-height: 90vh;
+    /* min-height: 90vh; */
     display: flex;
+    margin-bottom: 25px;
+    scrollbar-color: var(--lbg) var(--bg);
 }
 
 .page-wide-bar {
@@ -90,6 +92,11 @@ a:hover {
 .navbar-item:first-child {
     border-left: 0px solid var(--menuitem-border);
     padding: 0px 5px;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0px;
 }
 
 .footer-text {
