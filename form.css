@@ -10,6 +10,12 @@
     margin: 2px;
 }
 
+.main-form input:focus, .main-form textarea:focus{
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: var(--outline);
+}
+
 .main-form textarea {
     margin-left: 20px;
 }

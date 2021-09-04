@@ -1,4 +1,5 @@
 contactButtons.addEventListener('click', otherField)
+mainForm.addEventListener('submit', function(){alert('test')})
 
 function otherField() {
     var texts = ['Yhteydenoton syy', 'Reason for contacting']

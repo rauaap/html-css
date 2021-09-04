@@ -19,7 +19,8 @@
     --navbar-item: var(--lbg);
     --emphasis: var(--yellow);
     --link-visited: var(--purple);
-    --profile-pic-border: var(--vlbg)
+    --profile-pic-border: var(--vlbg);
+    --outline: var(--pink);
 }
 
 body {
