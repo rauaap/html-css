@@ -1,5 +1,5 @@
-const pageNames = ['Ansioluettelo', 'Resume']
-const links = ['ansioluettelo.html', 'resume.html']
+const pageNames = ['Ansioluettelo', 'Resume', 'Yhteydenottolomake', 'Contact form']
+const links = ['ansioluettelo.html', 'resume.html', 'form_fi.html', 'form_en.html']
 const footerText = ['Aapo Raukovaara',
                     ['s1aara00@students.osao.fi', 'mailto:s1aara00@students.osao.fi'],
                     ['Github', 'https://github.com/rauaap/html-css']]
@@ -46,7 +46,7 @@ function genMenu() {
         div.className = 'navbar-item edges-text centered-flex'
         var a = document.createElement('a')
         var flag = document.createElement('img')
-        flag.src = `img/${languages[i]}.png`
+        flag.src = `img/${languages[i%2]}.png`
         flag.className = 'flag-icon'
         a.appendChild(flag)
         a.href = links[i]

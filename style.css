@@ -19,6 +19,7 @@
     --navbar-item: var(--lbg);
     --emphasis: var(--yellow);
     --link-visited: var(--purple);
+    --profile-pic-border: var(--vlbg)
 }
 
 body {
@@ -146,8 +147,15 @@ a:hover {
     margin-left: 50px;
 }
 
+.profile-pic {
+    height: 200px;
+    border: 5px solid var(--profile-pic-border);
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
 .list-header {
-    margin-top: 0px;
+    margin-top: 20px;
 }
 
 .file-list {
@@ -162,4 +170,3 @@ a:hover {
 .file-list a:hover {
     color: var(--link-hover);
 }
-
