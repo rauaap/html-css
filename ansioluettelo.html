@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Ansioluettelo</title>
+        <link id="theme" rel="stylesheet" href="dark.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -112,10 +113,48 @@
                         <a href="files/cv_fi.txt" target="_blank"><li>Tekstitiedosto</li></a>
                         <a href="files/cv_fi.pdf" target="_blank"><li>PDF</li></a>
                     </ul>
+                    <div class="form-container">
+                        <form class="main-form" id="mainForm">
+                            <fieldset class="contact-information">
+                                <legend>Yhteystiedot</legend>
+                                <div class="space-between-field">
+                                    <label for="name">Nimi: </label>
+                                    <input type="text" id="name" required>
+                                </div>
+                                <div>
+                                <div class="space-between-field">
+                                    <label for="email">Sähköposti: </label>
+                                    <input id="email" type="email" required></input>
+                                </div>
+                                <div class="space-between-field">
+                                    <label for="phone">Puh. nro.: </label>
+                                    <input id="phone" type="tel"></input>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Viesti</legend>
+                                <textarea class="message-box"></textarea>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Yhteydenoton syy</legend>
+                                <div id="contactButtons">
+                                    <label for="business">Liiketoiminta</label>
+                                    <input id="business" type="radio" name="reason" checked><br>
+                                    <label for="question">Tiedustelut nettisivusta</label>
+                                    <input id="question" type="radio" name="reason"><br>
+                                    <label for="other">Muu syy</label>
+                                    <input id="other" type="radio" name="reason">
+                                    <input id="otherText" type="text" disabled="" placeholder="Yhteydenoton syy">
+                                </div>
+                            </fieldset>
+                            <input type="submit" value="Submit"></input>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div id="footer"></div>
         </div>
     </body>
     <script src="script.js"></script>
+    <script src="form.js"></script>
 </html>

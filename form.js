@@ -5,10 +5,10 @@ function otherField() {
     var texts = ['Yhteydenoton syy', 'Reason for contacting']
     if ( other.checked == true ) {
         otherText.disabled = false
-        otherText.placeholder = texts[lang]
+        otherText.style.visibility = 'visible'
     }
     else {
         otherText.disabled = true
-        otherText.placeholder = ''
+        otherText.style.visibility = 'hidden'
     }
 }

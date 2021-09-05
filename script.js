@@ -1,5 +1,5 @@
-const pageNames = ['Ansioluettelo', 'Resume', 'Yhteydenottolomake', 'Contact form']
-const links = ['ansioluettelo.html', 'resume.html', 'form_fi.html', 'form_en.html']
+const pageNames = ['Ansioluettelo', 'Resume']
+const links = ['ansioluettelo.html', 'resume.html']
 const footerText = ['Aapo Raukovaara',
                     ['s1aara00@students.osao.fi', 'mailto:s1aara00@students.osao.fi'],
                     ['Github', 'https://github.com/rauaap/html-css']]
@@ -7,8 +7,14 @@ var homeButtonHighlighted = new Image()
 homeButtonHighlighted.src = 'img/home2.png'
 window.addEventListener('load', genMenu)
 window.addEventListener('load', genFooter)
+localStorage.theme = 0
 
-// text.innerHTML = loremIpsum
+function themeChanger() {
+    var themes = ['dark', 'light']
+    localStorage.theme++
+    localStorage.theme %= 2
+    theme.href = `${themes[localStorage.theme]}.css`
+}
 
 function createHomeButton() {
     var div = document.createElement('div')

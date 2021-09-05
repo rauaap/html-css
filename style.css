@@ -1,16 +1,8 @@
 :root {
-    --bg: #282a36;
-    --lbg: #44475a;
-    --vlbg: #6272a4;
-    --fg: #f8f8f2;
-    --cyan: #8be9fd;
-    --green: #50fa7b;
-    --orange: #ffb86c;
-    --pink: #ff79c6;
-    --purple: #bd93f9;
-    --red: #ff5555;
-    --yellow: #f1fa8c;
-
+    --bground: var(--bg);
+    --fground: var(--fg);
+    --lbground: var(--lbg);
+    --vlbground: var(--vlbg);
     --menuitem-border: var(--bg);
     --footer-text: var(--fg);
     --link: var(--cyan);
@@ -24,8 +16,8 @@
 }
 
 body {
-    background-color: var(--bg);
-    color: white;
+    background-color: var(--bground);
+    color: var(--fground);
     font-family: Consolas, monospace;
     margin: 0px;
 }
@@ -50,7 +42,7 @@ a:hover {
     /* min-height: 90vh; */
     display: flex;
     margin-bottom: 25px;
-    scrollbar-color: var(--lbg) var(--bg);
+    scrollbar-color: var(--lbground) var(--bground);
 }
 
 .page-wide-bar {
@@ -170,4 +162,53 @@ a:hover {
 
 .file-list a:hover {
     color: var(--link-hover);
+}
+
+.main-form input, .main-form textarea {
+    background-color: var(--lbground);
+    color: var(--fground);
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    padding: 5px
+}
+
+.main-form input {
+    margin: 2px;
+}
+
+.main-form input:focus, .main-form textarea:focus{
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: var(--outline);
+}
+
+.main-form textarea {
+    margin-left: 20px;
+}
+
+.main-form input:disabled {
+    visibility: hidden;
+}
+
+.space-between-field {
+    display: flex;
+    justify-content: space-between;
+}
+
+.space-between-field input {
+    display: inline-block;
+    width: 300px;
+}
+
+.test {
+    display:inline;
+}
+
+.message-box {
+    width: 400px;
+    height: 200px;
+}
+
+.main-form input[type="submit"] {
+    margin: 5px;
 }
