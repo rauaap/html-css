@@ -4,6 +4,7 @@ const footerText = ['Aapo Raukovaara',
                     ['s1aara00@students.osao.fi', 'mailto:s1aara00@students.osao.fi'],
                     ['Github', 'https://github.com/rauaap/html-css']]
 var homeButtonHighlighted = new Image()
+var flag = document.createElement('img')
 homeButtonHighlighted.src = 'img/home2.png'
 window.addEventListener('load', genMenu)
 window.addEventListener('load', genFooter)
@@ -33,6 +34,14 @@ function createHomeButton() {
     return div
 }
 
+function createThemeButton() {
+    var img = document.createElement('img')
+    img.className = 'image-button'
+    img.src = 'img/theme.png'
+    img.addEventListener('click', themeChanger)
+    return img
+}
+
 function highlightHomeButton() {
     if ( event.type == 'mouseover' ) {
         event.target.src = 'img/home2.png'
@@ -51,7 +60,6 @@ function genMenu() {
         var div = document.createElement('div')
         div.className = 'navbar-item edges-text centered-flex'
         var a = document.createElement('a')
-        var flag = document.createElement('img')
         flag.src = `img/${languages[i%2]}.png`
         flag.className = 'flag-icon'
         a.appendChild(flag)
@@ -61,6 +69,7 @@ function genMenu() {
         div.appendChild(a)
         navbar.appendChild(div)
     }
+    navbar.appendChild( createThemeButton() )
 }
 
 function genFooter() {

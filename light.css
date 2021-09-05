@@ -1,2 +1,13 @@
 :root {
+    --bg: #ffffff;
+    --lbg: #BABDB6;
+    --vlbg: #ffffff;
+    --fg: #000000;
+    --cyan: #CC0000;
+    --green: #50fa7b;
+    --orange: #ffb86c;
+    --pink: #75507B;
+    --purple: #8F5902;
+    --red: #ff5555;
+    --yellow: #B12900;
 }

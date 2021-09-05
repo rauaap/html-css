@@ -18,7 +18,7 @@
 body {
     background-color: var(--bground);
     color: var(--fground);
-    font-family: Consolas, monospace;
+    font-family: Monaco, Consolas, monospace;
     margin: 0px;
 }
 
@@ -73,6 +73,10 @@ a:hover {
 
 .menu-icon {
     height: 15px;
+}
+
+.image-button {
+    cursor: pointer;
 }
 
 .home-link {
