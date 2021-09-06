@@ -1,23 +1,6 @@
-:root {
-    --bground: var(--bg);
-    --fground: var(--fg);
-    --lbground: var(--lbg);
-    --vlbground: var(--vlbg);
-    --menuitem-border: var(--bg);
-    --footer-text: var(--fg);
-    --link: var(--cyan);
-    --link-hover: var(--pink);
-    --page-wide-bar: var(--lbg);
-    --navbar-item: var(--lbg);
-    --emphasis: var(--yellow);
-    --link-visited: var(--purple);
-    --profile-pic-border: var(--vlbg);
-    --outline: var(--pink);
-}
-
 body {
-    background-color: var(--bground);
-    color: var(--fground);
+    background-color: var(--bg);
+    color: var(--fg);
     font-family: Monaco, Consolas, monospace;
     margin: 0px;
 }
@@ -42,14 +25,22 @@ a:hover {
     /* min-height: 90vh; */
     display: flex;
     margin-bottom: 25px;
-    scrollbar-color: var(--lbground) var(--bground);
+    scrollbar-color: var(--lbg) var(--bg);
 }
 
 .page-wide-bar {
     display: flex;
     width: 100vw;
-    background-color: var(--page-wide-bar);
+    background-color: var(--lbg);
     height: 25px;
+}
+
+.top {
+    justify-content: space-between;
+}
+
+.navbar-left-items {
+    display: flex;
 }
 
 .centered-flex {
@@ -59,9 +50,9 @@ a:hover {
 
 .navbar-item {
     height: 25px;
-    background-color: var(--navbar-item);
+    background-color: var(--lbg);
     border-width: 0px 1px;
-    border-color: var(--menuitem-border);
+    border-color: var(--bg);
     border-style: solid;
     padding: 0px 5px;
 }
@@ -83,12 +74,12 @@ a:hover {
     height: 100%;
 }
 
-.navbar-item:last-child {
-    border-right: 2px solid var(--menuitem-border);
+.navbar-item:last-of-type {
+    border-right: 2px solid var(--bg);
 }
 
 .navbar-item:first-child {
-    border-left: 0px solid var(--menuitem-border);
+    border-left: 0px solid var(--bg);
     padding: 0px 5px;
 }
 
@@ -99,7 +90,7 @@ a:hover {
 
 .footer-text {
     height: 25px;
-    color: var(--footer-text);
+    color: var(--fg);
     margin-right: 30px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -132,7 +123,7 @@ a:hover {
     padding-bottom: 10px;
     padding-top: 20px;
     text-align: left;
-    color: var(--emphasis);
+    color: var(--header);
 }
 
 .main-table .multiline-cell p:first-child {
@@ -146,7 +137,7 @@ a:hover {
 
 .profile-pic {
     height: 200px;
-    border: 5px solid var(--profile-pic-border);
+    border: 5px solid var(--img-border);
     border-radius: 3px;
     margin-bottom: 20px;
 }
@@ -169,11 +160,16 @@ a:hover {
 }
 
 .main-form input, .main-form textarea {
-    background-color: var(--lbground);
-    color: var(--fground);
-    border: 1px solid var(--input-border);
+    background-color: var(--lbg);
+    color: var(--fg);
+    border: 0px solid var(--input-border);
     border-radius: 5px;
     padding: 5px
+}
+
+.main-form fieldset {
+    border-style: solid;
+    border-color: var(--lbg);
 }
 
 .main-form input {
@@ -215,4 +211,8 @@ a:hover {
 
 .main-form input[type="submit"] {
     margin: 5px;
+}
+
+.main-form input[type="radio"] {
+    outline-style: none;
 }

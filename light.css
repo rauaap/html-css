@@ -1,13 +1,13 @@
-:root {
+body {
+    --fg: #000000;
     --bg: #ffffff;
     --lbg: #BABDB6;
     --vlbg: #ffffff;
-    --fg: #000000;
-    --cyan: #CC0000;
-    --green: #50fa7b;
-    --orange: #ffb86c;
-    --pink: #75507B;
-    --purple: #8F5902;
-    --red: #ff5555;
-    --yellow: #B12900;
+    --img-border: #6272a4;
+    --header: darkred;
+    --link: brown;
+    --link-hover: red;
+    --link-visited: green;
+    --outline: white;
+    --input-border: #ffffff;
 }

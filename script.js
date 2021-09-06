@@ -8,13 +8,20 @@ var flag = document.createElement('img')
 homeButtonHighlighted.src = 'img/home2.png'
 window.addEventListener('load', genMenu)
 window.addEventListener('load', genFooter)
-localStorage.theme = 0
+window.addEventListener('load', () => {chooseTheme(localStorage.themeChoice)})
 
 function themeChanger() {
+    localStorage.themeChoice ^= 1
+    chooseTheme(localStorage.themeChoice)
+}
+
+function chooseTheme(i) {
+    if ( i===undefined ) {
+        console.log('hey')
+        i = 0
+    }
     var themes = ['dark', 'light']
-    localStorage.theme++
-    localStorage.theme %= 2
-    theme.href = `${themes[localStorage.theme]}.css`
+    theme.href = `${themes[i]}.css`
 }
 
 function createHomeButton() {
@@ -54,7 +61,9 @@ function highlightHomeButton() {
 function genMenu() {
     var navbar = document.getElementById('navbar')
     navbar.className = 'page-wide-bar top fixed'
-    navbar.appendChild( createHomeButton() )
+    var left = document.createElement('div')
+    left.className = 'navbar-left-items'
+    left.appendChild( createHomeButton() )
     var languages = ['fi', 'gb']
     for ( var i = 0; i < links.length; i++ ) {
         var div = document.createElement('div')
@@ -67,8 +76,9 @@ function genMenu() {
         var text = document.createTextNode(pageNames[i])
         a.appendChild(text)
         div.appendChild(a)
-        navbar.appendChild(div)
+        left.appendChild(div)
     }
+    navbar.appendChild(left)
     navbar.appendChild( createThemeButton() )
 }
 
