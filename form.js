@@ -1,5 +1,5 @@
 contactButtons.addEventListener('click', otherField)
-mainForm.addEventListener('submit', function(){alert('test')})
+mainForm.addEventListener('submit', ()=>alert('Lomakkeesi on vastaanotettu\nYour form has been submitted'))
 
 function otherField() {
     var texts = ['Yhteydenoton syy', 'Reason for contacting']
