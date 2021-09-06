@@ -15,12 +15,15 @@ function themeChanger() {
 function chooseTheme(i) {
     if ( i===undefined ) {
         console.log('Theme unchosen. Setting themeChoice to 1.')
-        i = 1
+        i = 0
         localStorage.themeChoice = i
     }
-    var themes = ['dark', 'light']
+    var homeButtons = ['home.png', 'home2.png']
+    var themeButtons = ['light.png', 'dark2.png']
+    var themes = ['light', 'dark']
+    homeButton.src = `img/${homeButtons[i]}`
+    themeButton.src = `img/${themeButtons[i]}`
     theme.href = `${themes[i]}.css`
-    themeButton.src = `img/${themes[i]}.png`
 }
 
 function createHomeButton() {

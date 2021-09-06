@@ -3,11 +3,11 @@ body {
     --bg: #ffffff;
     --lbg: #BABDB6;
     --vlbg: #ffffff;
-    --img-border: #6272a4;
-    --header: darkred;
-    --link: brown;
-    --link-hover: red;
-    --link-visited: green;
-    --outline: white;
+    --img-border: #7D0000;
+    --header: #661D1B;
+    --link: #5F000A;
+    --link-hover: #EF2929;
+    --link-visited: #998900;
+    --outline: #B55900;
     --input-border: #ffffff;
 }

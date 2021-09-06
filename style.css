@@ -1,7 +1,7 @@
 body {
     background-color: var(--bg);
     color: var(--fg);
-    font-family: Monaco, Consolas, monospace;
+    font-family: Arial, Consolas;
     margin: 0px;
 }
 
@@ -153,6 +153,10 @@ a:hover {
 
 .file-list a:hover {
     color: var(--link-hover);
+}
+
+.main-form {
+    margin: 50px 0px;
 }
 
 .main-form input, .main-form textarea {

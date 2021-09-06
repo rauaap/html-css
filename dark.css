@@ -1,13 +1,13 @@
 body {
-    --fg: #f8f8f2;
-    --bg: #2E3436;
-    --lbg: #888A85;
+    --fg: #ffffff;
+    --bg: #111E26;
+    --lbg: #1D3240;
     --vlbg: #ffffff;
-    --img-border: #6272a4;
-    --header: yellow;
-    --link: #8be9fd;
-    --link-hover: red;
-    --link-visited: green;
-    --outline: white;
+    --img-border: #7FB4CA;
+    --header: #D5E8F0;
+    --link: #F4FF98;
+    --link-hover: #FF5858;
+    --link-visited: #FF9126;
+    --outline: #FFF4A2;
     --input-border: #ffffff;
 }
