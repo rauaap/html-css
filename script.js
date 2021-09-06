@@ -3,9 +3,6 @@ const links = ['ansioluettelo.html', 'resume.html']
 const footerText = ['Aapo Raukovaara',
                     ['s1aara00@students.osao.fi', 'mailto:s1aara00@students.osao.fi'],
                     ['Github', 'https://github.com/rauaap/html-css']]
-var homeButtonHighlighted = new Image()
-var flag = document.createElement('img')
-homeButtonHighlighted.src = 'img/home2.png'
 window.addEventListener('load', genMenu)
 window.addEventListener('load', genFooter)
 window.addEventListener('load', () => {chooseTheme(localStorage.themeChoice)})
@@ -17,45 +14,37 @@ function themeChanger() {
 
 function chooseTheme(i) {
     if ( i===undefined ) {
-        console.log('hey')
-        i = 0
+        console.log('Theme unchosen. Setting themeChoice to 1.')
+        i = 1
+        localStorage.themeChoice = i
     }
     var themes = ['dark', 'light']
     theme.href = `${themes[i]}.css`
+    themeButton.src = `img/${themes[i]}.png`
 }
 
 function createHomeButton() {
-    var div = document.createElement('div')
-    div.className = 'menu-item navbar-item centered-flex'
     var a = document.createElement('a')
     a.href = 'index.html'
-    a.className = 'home-link centered-flex'
+    a.className = 'button-container centered-flex navbar-item'
     var img = document.createElement('img')
     img.id = 'homeButton'
-    img.addEventListener('mouseover', highlightHomeButton)
-    img.addEventListener('mouseout', highlightHomeButton)
-    img.className = 'menu-icon'
+    img.className = 'image-button'
     img.src = 'img/home.png'
     a.appendChild(img)
-    div.appendChild(a)
-    return div
+    return a
 }
 
 function createThemeButton() {
+    var div = document.createElement('div')
+    div.className = 'button-container centered-flex'
     var img = document.createElement('img')
     img.className = 'image-button'
     img.src = 'img/theme.png'
-    img.addEventListener('click', themeChanger)
-    return img
-}
-
-function highlightHomeButton() {
-    if ( event.type == 'mouseover' ) {
-        event.target.src = 'img/home2.png'
-    }
-    else if ( event.type == 'mouseout') {
-        event.target.src = 'img/home.png'
-    }
+    img.id = 'themeButton'
+    div.addEventListener('click', themeChanger)
+    div.appendChild(img)
+    return div
 }
 
 function genMenu() {
@@ -69,6 +58,7 @@ function genMenu() {
         var div = document.createElement('div')
         div.className = 'navbar-item edges-text centered-flex'
         var a = document.createElement('a')
+        var flag = document.createElement('img')
         flag.src = `img/${languages[i%2]}.png`
         flag.className = 'flag-icon'
         a.appendChild(flag)
