@@ -156,7 +156,8 @@ a:hover {
 }
 
 .main-form {
-    margin: 50px 0px;
+    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 .main-form input, .main-form textarea {
@@ -200,10 +201,6 @@ a:hover {
     width: 300px;
 }
 
-.test {
-    display:inline;
-}
-
 .message-box {
     width: 400px;
     height: 200px;
@@ -215,4 +212,14 @@ a:hover {
 
 .main-form input[type="radio"] {
     outline-style: none;
+}
+
+.emphasised {
+    font-weight: bold;
+}
+
+.list-header {
+}
+
+.form-header {
 }
