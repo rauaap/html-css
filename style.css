@@ -138,6 +138,11 @@ a:hover {
     margin-bottom: 20px;
 }
 
+.emphasised {
+    color: var(--header);
+    font-weight: bold;
+}
+
 .list-header {
     margin-top: 20px;
 }
